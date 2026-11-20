@@ -11,9 +11,7 @@ export function Footer() {
         <p className="small text-white-50 mb-0">
           © {new Date().getFullYear()} I-PET Fabrics &amp; Styles. All rights reserved.
         </p>
-        <a href="/admin/login" className="small text-white-50 text-decoration-none">
-          Admin
-        </a>
+
       </div>
     </footer>
   );
