@@ -1,0 +1,100 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  /* I-PET Fabrics & Styles brand palette, sampled from the logo */
+  --color-dark: #9e6542;         /* near-black — nav, hero, footer backgrounds */
+  --color-dark-light: #322922;   /* slightly lighter charcoal — secondary dark sections */
+  --brand-red: #cc220a;          /* primary accent — buttons, CTAs */
+  --brand-red-dark: #a31c09;     /* hover state */
+  --brand-red-deep: #8c1706;     /* secondary accent — errors, delete, small emphasis */
+  --color-ivory: #faf7f5;        /* near-white background */
+  --color-ink: #211c19;          /* body text */
+
+
+  --bs-primary: var(--brand-red);
+  --bs-primary-rgb: 204, 34, 10;
+  --bs-dark: var(--color-dark);
+  --bs-dark-rgb: 33, 28, 25;
+  --bs-body-bg: var(--color-ivory);
+  --bs-body-color: var(--color-ink);
+  --bs-link-color: var(--brand-red);
+  --bs-link-hover-color: var(--brand-red-dark);
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-lg: 1rem;
+  --bs-border-radius-pill: 50rem;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.font-display {
+  font-family: 'Clash Display', sans-serif;
+}
+.font-mono {
+  font-family: 'IBM Plex Mono', monospace;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Brand color utility classes (Bootstrap doesn't know these by default) */
+.bg-brand-dark { background-color: var(--color-dark) !important; }
+.bg-brand-dark-light { background-color: var(--color-dark-light) !important; }
+.bg-brand-red { background-color: var(--brand-red) !important; }
+.bg-brand-ivory { background-color: var(--color-ivory) !important; }
+.text-brand-red { color: var(--brand-red) !important; }
+.text-brand-red-deep { color: var(--brand-red-deep) !important; }
+.text-ivory { color: var(--color-ivory) !important; }
+
+.btn-brand {
+  background-color: var(--brand-red);
+  border-color: var(--brand-red);
+  color: #fff;
+}
+.btn-brand:hover {
+  background-color: var(--brand-red-dark);
+  border-color: var(--brand-red-dark);
+  color: #fff;
+}
+.btn-brand-dark {
+  background-color: var(--color-dark);
+  border-color: var(--color-dark);
+  color: #fff;
+}
+.btn-brand-dark:hover {
+  background-color: var(--color-dark-light);
+  border-color: var(--color-dark-light);
+  color: #fff;
+}
+.btn-outline-ivory {
+  border-color: rgba(250, 247, 245, 0.4);
+  color: var(--color-ivory);
+}
+.btn-outline-ivory:hover {
+  border-color: var(--color-ivory);
+  background-color: transparent;
+  color: var(--color-ivory);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Swing-tag notch for product cards */
+.tag-notch {
+  position: relative;
+}
+.tag-notch::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-ivory);
+  border-radius: 50%;
+  border: 1.5px solid var(--color-ink);
+  z-index: 2;
+}

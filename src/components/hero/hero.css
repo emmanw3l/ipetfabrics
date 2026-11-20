@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+#top {
+  height: calc(100vh - 5.5rem);
+
+  /* display: flex; */
+}
+
+@media (max-width: 991.98px) {
+  #top {
+    height: 100vh !important;
+    
+  }
+   #top img {
+        max-height: 35vh !important;
+    }
+
+  #top h1 {
+    font-size: clamp(2.4rem, 7vw, 3.5rem);
+  }
+
+  #top p.fs-5 {
+    font-size: 1.05rem !important;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #top img {
+     max-height: 28vh !important;
+  }
+
+  #top h1 {
+    font-size: clamp(2rem, 9vw, 2.7rem);
+  }
+
+  #top .btn {
+    width: 100%;
+  }
+}
